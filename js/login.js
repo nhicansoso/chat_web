@@ -24,3 +24,4 @@ loginBtn.onclick = () => {
     const formData = new FormData(form);
     xhr.send(formData);
 };
+

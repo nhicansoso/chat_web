@@ -18,8 +18,8 @@
                 enctype="multipart/form-data">
                 <div class="error_text"></div>
                 <div class="login_box">
-                    <input type="text" required name="email" placeholder=" " class="login_input" />
-                    <label class="login_label">Email</label>
+                    <input type="text" required name="emailname" placeholder=" " class="login_input" />
+                    <label class="login_label">Email or Name</label>
                     <i class="ri-user-line login_icon"></i>
                 </div>
 

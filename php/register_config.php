@@ -6,10 +6,10 @@ $email = mysqli_real_escape_string($conn, $_POST['email']);
 $password = mysqli_real_escape_string($conn, $_POST['password']);
 
 if (!empty($name) && !empty($email) && !empty($password)) {
-    $sql = "SELECT email FROM users WHERE email = '$email'";
+    $sql = "SELECT email FROM users WHERE email = '$email' or name = '$name'";
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) > 0) {
-        echo "Email đã tồn tại!";
+        echo "Email hoặc tên đã tồn tại!";
     } else {
         $avatar_name = 'default.jpg';
         if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === UPLOAD_ERR_OK) {

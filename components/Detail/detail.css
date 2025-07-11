@@ -1,6 +1,6 @@
 .detail {
     flex: 1;
-    display: none;
+    display: flex;
 }
 
 /* User section */
