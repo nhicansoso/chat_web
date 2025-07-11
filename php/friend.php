@@ -6,7 +6,16 @@ $outgoing_id = $_SESSION['user_id'] ?? null;
 $searchTerm = mysqli_real_escape_string($conn, $_POST['searchTerm'] ?? '');
 
 $sql = "
-    SELECT u.*
+    SELECT u.*, 
+        (
+            SELECT message
+            FROM message 
+            WHERE 
+                (incoming_msg_id = u.user_id AND outgoing_msg_id = {$outgoing_id}) OR
+                (incoming_msg_id = {$outgoing_id} AND outgoing_msg_id = u.user_id)
+            ORDER BY message_id DESC 
+            LIMIT 1
+        ) AS last_msg
     FROM users u
     JOIN friends f 
       ON (
@@ -18,11 +27,12 @@ $sql = "
 ";
 
 
+
 $query = mysqli_query($conn, $sql);
 if (!$query) {
-    die("Query failed: " . mysqli_error($conn));
+  die("Query failed: " . mysqli_error($conn));
 }
 
 if (mysqli_num_rows($query) > 0) {
-    include_once "friend_data.php";
+  include_once "friend_data.php";
 }

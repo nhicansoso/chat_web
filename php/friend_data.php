@@ -8,7 +8,7 @@ include_once 'config.php';
 <head>
     <meta charset="UTF-8">
     <title>friends</title>
-    <link rel="stylesheet" href="./css/search_data.css">
+    <link rel="stylesheet" href="./css/list_data.css">
 </head>
 
 <body>
@@ -21,7 +21,8 @@ include_once 'config.php';
             </div>
             <div class="details">
                 <span class="username"><?= htmlspecialchars($row['name']) ?></span>
-                <small class="status"><?= htmlspecialchars($row['status']) ?></small>
+                <small class="status"><?= htmlspecialchars($row['last_msg'] ?? 'Chưa có tin nhắn') ?></small>
+
             </div>
         </a>
 

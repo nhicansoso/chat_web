@@ -35,6 +35,7 @@ closeBtn.addEventListener('click', () => {
     userList.style.display = 'none';
     userChat.style.display = 'block';
     searchInput.value = '';
+    userList.innerHTML = '';
 });
 
 searchInput.onkeyup = () => {
