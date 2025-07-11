@@ -14,7 +14,7 @@ if (!$outgoing_id || !$incoming_id) {
 }
 
 $sql = "
-    SELECT * FROM message 
+    SELECT * FROM messages 
     WHERE 
         (incoming_msg_id = '$incoming_id' AND outgoing_msg_id = '$outgoing_id')
         OR 

@@ -7,7 +7,7 @@ include_once 'config.php';
 
 <head>
     <meta charset="UTF-8">
-    <title>friends</title>
+    <title>friendships</title>
     <link rel="stylesheet" href="./css/list_data.css">
 </head>
 

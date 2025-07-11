@@ -9,7 +9,7 @@ $sql = "
     SELECT u.*, 
         (
             SELECT message
-            FROM message 
+            FROM messages 
             WHERE 
                 (incoming_msg_id = u.user_id AND outgoing_msg_id = {$outgoing_id}) OR
                 (incoming_msg_id = {$outgoing_id} AND outgoing_msg_id = u.user_id)
@@ -17,11 +17,11 @@ $sql = "
             LIMIT 1
         ) AS last_msg
     FROM users u
-    JOIN friends f 
+    JOIN friendships f 
       ON (
-        (f.user_id = {$outgoing_id} AND f.friend_id = u.user_id)
+        (f.requester_id = {$outgoing_id} AND f.receiver_id = u.user_id)
         OR
-        (f.friend_id = {$outgoing_id} AND f.user_id = u.user_id)
+        (f.receiver_id = {$outgoing_id} AND f.requester_id = u.user_id)
       )
     WHERE f.status = 'accepted'
 ";
