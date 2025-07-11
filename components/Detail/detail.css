@@ -1,0 +1,144 @@
+.detail {
+    flex: 1;
+    display: none;
+}
+
+/* User section */
+.detail .user {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #dddddd35;
+}
+
+.detail .user img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Info section */
+.detail .info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Search */
+.detail .info .search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.detail .info .search input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+}
+
+.detail .info .search input::placeholder {
+    color: gray;
+}
+
+.detail .info .search i {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Option */
+.detail .info .option {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.detail .info .option .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.detail .info .option .title i {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #dddddd35;
+    border-radius: 50%;
+}
+
+/* Photos */
+.detail .info .option .photos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.detail .info .option .photos .photoItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail .info .option .photos .photoItem .photoDetail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.detail .info .option .photos .photoItem .photoDetail img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.detail .info .option .photos .photoItem .photoDetail span {
+    color: white;
+    font-size: 14px;
+}
+
+.detail .info .option .photos .photoItem i {
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Buttons */
+.detail .info button {
+    background-color: #ff4d4f;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.detail .info button:hover {
+    background-color: #e03a3d;
+}
+
+.logout {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.logout:hover {
+    background-color: #e60000;
+}

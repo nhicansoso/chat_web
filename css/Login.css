@@ -1,0 +1,183 @@
+/* ===== Layout & Container ===== */
+.login_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--bg-gradient);
+}
+
+/* ===== Content Box ===== */
+.login_content {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login_content h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* ===== Form & Box ===== */
+.login_form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login_box {
+    position: relative;
+    width: 100%;
+}
+
+/* ===== Input, Label, Icon ===== */
+.login_input {
+    width: 100%;
+    padding: 16px 45px 16px 45px;
+    border: 1px solid var(--input-border);
+    border-radius: 10px;
+    font-size: var(--font-size);
+    background: white;
+    outline: none;
+    color: #333;
+}
+
+.login_input:focus {
+    border-color: var(--primary-color);
+}
+
+/* ===== Floating label ===== */
+.login_label {
+    position: absolute;
+    left: 45px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 0 4px;
+    font-size: var(--font-size);
+    color: var(--label-color);
+    pointer-events: none;
+    transition: 0.2s ease;
+}
+
+.login_input:focus~.login_label,
+.login_input:not(:placeholder-shown)~.login_label {
+    top: 0;
+    font-size: calc(var(--font-size) - 4px);
+    color: var(--label-active);
+    font-weight: 600;
+}
+
+/* ===== Left icon ===== */
+.login_icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: var(--label-color);
+    transition: color 0.2s;
+}
+
+.login_input:focus~.login_icon,
+.login_box:focus-within .login_icon {
+    color: var(--primary-color);
+}
+
+/* ===== Toggle password icon ===== */
+.toggle_password_icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: var(--label-color);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.login_input:focus~.toggle_password_icon,
+.login_box:focus-within .toggle_password_icon {
+    color: var(--primary-color);
+}
+
+/* ===== Forgot Password ===== */
+.login_forgot {
+    font-size: 14px;
+    text-align: right;
+    color: var(--label-color);
+    text-decoration: none;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.login_forgot:hover {
+    color: var(--primary-hover);
+}
+
+/* ===== Login Button ===== */
+.login_button {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 16px;
+    border: none;
+    border-radius: 25px;
+    font-size: var(--font-size);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(37, 117, 252, 0.08);
+    letter-spacing: 0.5px;
+}
+
+.login_button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 4px 16px rgba(37, 117, 252, 0.18);
+}
+
+/* ===== Switch Link ===== */
+.login_switch {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    margin-top: 20px;
+}
+
+.login_switch a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+.login_switch a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Error Text ===== */
+.error_text {
+    color: #d8000c;
+    background: #fff4f4;
+    padding: 12px 16px;
+    border: 1.5px solid #d8000c;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    font-size: 15px;
+    display: none;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(216, 0, 12, 0.07);
+    width: 100%;
+    line-height: 1.5;
+    letter-spacing: 0.1px;
+    transition: all 0.2s;
+}

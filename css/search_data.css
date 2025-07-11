@@ -1,0 +1,56 @@
+.user_item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.avatar_wrapper {
+    position: relative;
+}
+
+.avatar_wrapper img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.avatar_wrapper i {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    font-size: 10px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: content-box;
+}
+
+.avatar_wrapper i.online {
+    color: #24832c;
+}
+
+.avatar_wrapper i.offline {
+    color: #888;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.status {
+    color: gray;
+}

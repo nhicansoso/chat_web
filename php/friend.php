@@ -1,0 +1,28 @@
+<?php
+include_once 'config.php';
+session_start();
+
+$outgoing_id = $_SESSION['user_id'] ?? null;
+$searchTerm = mysqli_real_escape_string($conn, $_POST['searchTerm'] ?? '');
+
+$sql = "
+    SELECT u.*
+    FROM users u
+    JOIN friends f 
+      ON (
+        (f.user_id = {$outgoing_id} AND f.friend_id = u.user_id)
+        OR
+        (f.friend_id = {$outgoing_id} AND f.user_id = u.user_id)
+      )
+    WHERE f.status = 'accepted'
+";
+
+
+$query = mysqli_query($conn, $sql);
+if (!$query) {
+    die("Query failed: " . mysqli_error($conn));
+}
+
+if (mysqli_num_rows($query) > 0) {
+    include_once "friend_data.php";
+}

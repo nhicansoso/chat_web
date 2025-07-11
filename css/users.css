@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("../uploads/GoKu.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.container {
+    background-color: rgba(17, 25, 40, 0.75);
+    height: 90vh;
+    width: 80vw;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    display: flex;
+    backdrop-filter: blur(19px) saturate(180%);
+}
