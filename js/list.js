@@ -5,7 +5,7 @@ const searchBtn = document.querySelector('.searchBtn');
 const closeBtn = document.querySelector('.closeBtn');
 
 window.addEventListener("DOMContentLoaded", () => {
-    fetch("php/friend.php", {
+    fetch("php/list/friend.php", {
         method: "POST"
     })
         .then((res) => res.text())
@@ -47,10 +47,12 @@ searchInput.onkeyup = () => {
         userChat.style.display = "none";
 
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", "php/search.php", true);
+        xhr.open("POST", "php/list/search.php", true);
         xhr.onload = () => {
             if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
                 userList.innerHTML = xhr.response;
+                console.log(xhr.response);
+
             }
         };
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

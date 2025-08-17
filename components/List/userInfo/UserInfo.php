@@ -17,4 +17,7 @@ $row = mysqli_fetch_assoc($result);
         <img class="userimg" src="uploads/<?php echo htmlspecialchars($row['avatar']); ?>" alt="img_avatar">
         <span class="username"><?php echo htmlspecialchars($row['name']); ?></span>
     </div>
+    <form action="./php/logout.php" method="post">
+        <button type="submit" class="red-btn" name="logout">Logout</button>
+    </form>
 </div>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Register</title>
     <link rel="stylesheet" href="./css/register.css">
-    <link rel="stylesheet" href="./css/Global.css">
+    <link rel="stylesheet" href="./css/global.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 </head>
 
@@ -52,7 +52,6 @@
         </section>
     </div>
 </body>
-<script src="js/preview_img.js"></script>
 <script src="js/register.js"></script>
 
 </html>

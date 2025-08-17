@@ -49,16 +49,6 @@
     border-radius: 50%;
 }
 
-.chatlist .search .chat_add button {
-    background-color: rgba(17, 25, 40, 0.5);
-    font-size: 20px;
-    color: white;
-    cursor: pointer;
-    padding: 8px;
-    border-radius: 10px;
-    border: none;
-}
-
 .closeBtn {
     display: none;
     background-color: transparent;

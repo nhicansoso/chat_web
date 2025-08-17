@@ -1,12 +1,3 @@
-.chat {
-    flex: 2;
-    border-left: 1px solid #dddddd35;
-    border-right: 1px solid #dddddd35;
-    height: 100%;
-    display: none;
-    flex-direction: column;
-}
-
 /* Top */
 .chat .top {
     padding: 15px;
@@ -45,12 +36,10 @@
     flex-direction: column;
     gap: 20px;
     scrollbar-width: none;
-    /* Firefox */
 }
 
 .chat .center::-webkit-scrollbar {
     display: none;
-    /* Chrome */
 }
 
 .chat .center .message {
@@ -72,6 +61,16 @@
     background-color: rgba(17, 25, 40, 0.3);
     border-radius: 0px 10px 10px 20px;
     color: white;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+.chat-image {
+    max-width: 200px;
+    border-radius: 8px;
+    margin-bottom: 5px;
 }
 
 .chat .center .message .text span {
@@ -91,11 +90,45 @@
     background-color: rgb(0, 195, 255);
     color: black;
     border-radius: 10px 0px 20px 10px;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
 }
 
 .chat .center .message.own .text span {
     align-self: flex-start;
 }
+
+.preview-img-wrapper {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.preview-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.cancel-img-btn {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    line-height: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
 
 /* Bottom */
 .chat .bottom {
@@ -106,6 +139,7 @@
     border-top: 1px solid #dddddd35;
     gap: 20px;
     margin-top: auto;
+    min-width: 0;
 }
 
 .chat .bottom .icon {
@@ -130,7 +164,7 @@
     border-radius: 10px;
 }
 
-.chat .bottom .emoji {
+/* .chat .bottom .emoji {
     position: relative;
 }
 
@@ -145,7 +179,7 @@
     position: absolute;
     bottom: 50px;
     left: 0;
-}
+} */
 
 .chat .bottom .sendButton {
     background-color: rgb(0, 195, 255);
@@ -155,4 +189,50 @@
     border: none;
     border-radius: 8px;
     cursor: pointer;
+}
+
+.friend_btn {
+    padding: 8px 14px;
+    margin-left: auto;
+    background: #0d6efd;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.friend_btn:hover {
+    background: #0956d1;
+}
+
+.friend_btn:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+
+.friend_btn.block {
+    background: #dc3545;
+}
+
+.friend_actions {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
+
+.friend_tag {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.blocked-message {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #ff4d4f;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
 }

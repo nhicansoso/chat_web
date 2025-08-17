@@ -3,7 +3,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url("../uploads/GoKu.jpg");
+    background-image: url("../uploads/background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -18,4 +18,32 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.125);
     display: flex;
     backdrop-filter: blur(19px) saturate(180%);
+}
+
+.list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.chat {
+    flex: 2;
+    border-left: 1px solid #dddddd35;
+    border-right: 1px solid #dddddd35;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+}
+
+.list,
+.chat,
+.detail {
+    min-width: 0;
 }

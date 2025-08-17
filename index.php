@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="./css/Login.css">
-    <link rel="stylesheet" href="./css/Global.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/global.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 </head>
 
@@ -18,8 +18,8 @@
                 enctype="multipart/form-data">
                 <div class="error_text"></div>
                 <div class="login_box">
-                    <input type="text" required name="emailname" placeholder=" " class="login_input" />
-                    <label class="login_label">Email or Name</label>
+                    <input type="text" required name="nameOrEmail" placeholder=" " class="login_input" />
+                    <label class="login_label">Name Or Email</label>
                     <i class="ri-user-line login_icon"></i>
                 </div>
 
@@ -30,7 +30,7 @@
                     <i class="ri-eye-off-line toggle_password_icon" id="togglePassword"></i>
                 </div>
 
-                <a href="forgot-password.php" class="login_forgot">Forgot Password?</a>
+                <a href="./php/password_reset/forgot_password.php" class="login_forgot">Forgot Password?</a>
 
                 <button type="submit" class="login_button">Login</button>
             </form>
@@ -42,7 +42,6 @@
             <div id="loginResult"></div>
         </div>
     </div>
-    <script src="js/hide_pass.js"></script>
     <script src="js/login.js"></script>
 </body>
 
